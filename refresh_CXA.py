@@ -17,7 +17,7 @@ for handle in handles:  # 历遍所有标签的句柄
         break #退出循环
 print(driver.title, driver.current_window_handle)
 
-# driver.refresh()  #刷新页面
+
 # driver.implicitly_wait(5)
 button_back = driver.find_element_by_id("loginPageLink")
 button_back.click()
@@ -37,6 +37,8 @@ driver.find_element_by_id("btnLogin").click()
 
 print("login complete")
 time.sleep(3)
+
+driver.refresh()  #刷新页面
 
 driver.find_element_by_xpath('//*[@id="idCitrix.MPS.Desktop.XD76.DG_005fWIN7X64_005fNAS02_0020_0024S30-28"]').click()
 
